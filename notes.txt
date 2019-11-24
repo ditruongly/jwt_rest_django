@@ -10,4 +10,10 @@ django-admin startapp serverApp
 cd ..
 git push origin master
 git push -u origin master
-git push 
+git push
+
+# dev-tools
+apt-get install httpie
+http http://127.0.0.1:8000/hello/
+
+curl http://127.0.0.1:8000/hello/
