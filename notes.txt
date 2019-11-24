@@ -1,0 +1,11 @@
+pip install djangorestframework
+source env/bin/activate
+mkdir jwtRest
+cd jwtRest
+git init
+git remote add origin git@github.com:ditruongly/jwt_rest_django.git
+django-admin startproject loginProject .
+cd loginProject
+django-admin startapp serverApp
+cd ..
+git push origin master
