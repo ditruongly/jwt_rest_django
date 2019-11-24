@@ -9,3 +9,5 @@ cd loginProject
 django-admin startapp serverApp
 cd ..
 git push origin master
+git push -u origin master
+git push 
