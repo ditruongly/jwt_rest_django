@@ -17,3 +17,12 @@ apt-get install httpie
 http http://127.0.0.1:8000/hello/
 
 curl http://127.0.0.1:8000/hello/
+
+# migrate database after protecting API endpoint
+python manage.py migrate
+
+# access protected API endpoint
+python manage.py createsuperuser --username victor -- email victor@gmail.com
+python manage.py drf_create_token victor
+# Generated token 4c0ce6784c238905430e8e019b8691408202b3ce
+http http://127.0.0.1:8000/hello/ 'Authorization: Token 4c0ce6784c238905430e8e019b8691408202b3ce'
